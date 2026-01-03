@@ -1,24 +1,97 @@
-# Dependencies
-node_modules/
+# ================================
+# ROOT LEVEL IGNORES
+# ================================
 
-# Environment
-.env
-.env.local
-
-# Build
-dist/
-build/
-.out/
-.next/
-
-# Logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# IDE
+# IDE & Editor
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
 
-# OS
+# OS files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# ================================
+# BACKEND (Node.js) SPECIFIC
+# ================================
+backend/node_modules/
+backend/npm-debug.log*
+backend/yarn-debug.log*
+backend/yarn-error.log*
+backend/.env
+backend/.env.*
+backend/.env.local
+backend/.env.development.local
+backend/.env.test.local
+backend/.env.production.local
+backend/coverage/
+backend/.nyc_output/
+backend/dist/
+backend/build/
+backend/logs/
+backend/*.log
+backend/.npm
+backend/.cache/
+
+# Database files (jika ada)
+backend/*.db
+backend/*.sqlite
+backend/*.sqlite3
+
+# ================================
+# FRONTEND (React) SPECIFIC
+# ================================
+frontend/node_modules/
+frontend/.env
+frontend/.env.*
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+frontend/build/
+frontend/dist/
+frontend/.next/
+frontend/out/
+frontend/.nuxt/
+frontend/.cache/
+frontend/.parcel-cache/
+frontend/.eslintcache
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/coverage/
+
+# React/Vue/Angular cache
+frontend/.vuepress/dist
+frontend/.serverless/
+frontend/.fusebox/
+
+# ================================
+# GLOBAL NODE IGNORES
+# ================================
+node_modules/          # Jika ada di root juga
+package-lock.json      # Tapi ini biasanya perlu disimpan
+yarn.lock              # Simpan lock files untuk konsistensi
+
+# ================================
+# SYSTEM & MISC
+# ================================
+*.log
+logs/
+pids/
+*.pid
+*.seed
+*.pid.lock
